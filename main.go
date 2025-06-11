@@ -10,6 +10,8 @@ func main() {
 	ll.Add(20)
 	ll.Add(30)
 
+	ll.Delete(30)
+
 	ll.Display()
 
 }

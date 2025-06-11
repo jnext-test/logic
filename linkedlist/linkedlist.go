@@ -42,5 +42,19 @@ func (ll *List) Display() {
 }
 
 func (ll *List) Delete(data int) {
-
+	if ll.head == nil {
+		return
+	}
+	if ll.head.data == data {
+		ll.head = ll.head.next
+		return
+	}
+	current := ll.head
+	for current.next != nil {
+		if current.next.data == data {
+			current.next = current.next.next
+			return
+		}
+		current = current.next
+	}
 }
