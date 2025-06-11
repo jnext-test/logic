@@ -40,3 +40,7 @@ func (ll *List) Display() {
 		current = current.next
 	}
 }
+
+func (ll *List) Delete(data int) {
+
+}
