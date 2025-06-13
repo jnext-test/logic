@@ -58,3 +58,21 @@ func (ll *List) Delete(data int) {
 		current = current.next
 	}
 }
+
+func (ll *List) DeleteLast() {
+	if ll.head == nil { // Case 1: Empty list
+		return
+	}
+
+	if ll.head.next == nil { // Case 2: Single node list
+		ll.head = nil
+		return
+	}
+
+	// Case 3: Multiple nodes
+	current := ll.head
+	for current.next.next != nil { // Traverse to the second-to-last node
+		current = current.next
+	}
+	current.next = nil // Set the next of the second-to-last node to nil
+}
